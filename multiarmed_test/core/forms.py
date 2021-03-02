@@ -2,11 +2,7 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import DataRequired, Email, EqualTo
 from wtforms import ValidationError
-#this allows is to import file to the site
-from flask_wtf.file import FileField, FileAllowed
-#This is relater to users
-from flask_login import current_user
-from puppycompanyblog.models import User
+from multiarmed_test import User
 
 #Registration form
 class RegistrationForm(Flaskform):
