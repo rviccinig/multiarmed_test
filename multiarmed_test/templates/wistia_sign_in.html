@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+  <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="./wistia.css">
+
+    </head>
+
+</head>
+<body class="registration">
+  <main role="main">
+    <div class="AuthFormContainer">
+      <div class="AuthFormWrapper">
+        <div class="AuthForm">
+
+          <header>
+            <section class="NavContainer">
+              <nav>
+                <div class="Row">
+                  <div class="Column u-center">
+                    <h1><img class="Logo" src="/images/logo_468.png" alt="Wistia"></h1>
+                  </div>
+                </div>
+              </nav>
+            </section>
+          </header>
+
+          <hr data-content="or">
+
+          <form accept-charset="UTF-8" action="/registration" method="post"><input name="_csrf_token" type="hidden" value="NWAJB2EbHwMEdHl3DEF2HwVSEwUjYBEDZSjUVTHk5541M6BfKjbAA7Si"><input name="_utf8" type="hidden" value="✓">
+            <div class="Row">
+              <div class="Column">
+                <label for="user_first_name">First name</label> <input id="user_first_name" name="user[first_name]" onfocus="window.scrollTo(0, 0);" placeholder="Lenny" type="text" autofocus="" required="">
+              </div>
+              <div class="Column">
+                <label for="user_last_name">Last name</label> <input id="user_last_name" name="user[last_name]" placeholder="Lavigne" type="text" required="">
+              </div>
+            </div>
+            <div class="Row">
+              <div class="Column">
+                <label for="user_email">Your work email</label> <input id="user_email" maxlength="200" name="user[email]" placeholder="lenny@wistia.com" type="email" required="">
+              </div>
+              <div class="Column">
+                <label for="user_job_title">Job Title</label> <input id="user_job_title" maxlength="200" name="user[other][job_title]" placeholder="Marketing Manager" type="text" required="">
+              </div>
+            </div>
+            <div class="Row">
+              <div class="Column">
+                <label for="user_password">Set a password</label> <input id="user_password" maxlength="200" minlength="8" name="user[password]" placeholder="8 characters or more!" type="password" required="">
+              </div>
+            </div>
+
+            <input id="user_contact_visitor_key" name="user[other][contact_visitor_key]" type="hidden" value="bf8d9aa_031a6751-24a5-4355-918b-1fda6dea8513-d87995895-e95ab84bb1b7-fcc7"> <input id="user_contact_hubspot_utk"
+              name="user[other][contact_hubspot_utk]" type="hidden" value="60e9ec3ba1604865d67717da2a6c4b7f">
+            <input id="auth_app" name="app" type="hidden" value="wistia">
+            <div class="Row">
+              <div class="Column">
+                <p class="MutedSubtext">By clicking this button, you agree to our <a class="MutedSubtext MutedSubtext__link" href="https://wistia.com/terms">Terms of Service</a>
+                  and <a class="MutedSubtext MutedSubtext__link" href="https://wistia.com/privacy">Privacy Policy</a>.</p>
+              </div>
+              <div class="Column">
+                <button type="submit">Create a free account</button>
+              </div>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
