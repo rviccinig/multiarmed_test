@@ -2,10 +2,10 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import DataRequired, Email, EqualTo
 from wtforms import ValidationError
-from multiarmed_test import User
+from multiarmed_test.models import User
 
 #Registration form
-class RegistrationForm(Flaskform):
+class RegistrationForm(FlaskForm):
     email=StringField('Email',validators=[DataRequired(),Email()])
     username=StringField('UserName',validators=[DataRequired()])
     password=PasswordField('Password',validators=[DataRequired(),EqualTo('pass_confirm',message='Passwords do not match!')])
