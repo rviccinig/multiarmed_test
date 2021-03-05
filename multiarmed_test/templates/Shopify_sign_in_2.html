@@ -6,7 +6,7 @@
   <meta charset="utf-8">
 
   <!--  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/my_shopify_style.css') }}">-->
-  <link rel="stylesheet" href="./styles/my_shopify_style_2.css">
+  <link rel="stylesheet" href="{{url_for('static',filename='styles/my_shopify_style_2.css')}}">
 
   <!-- This is the Shopify example landing page -->
 
@@ -42,7 +42,7 @@
     </svg></div>
   <div id="PageContainer">
     <main role="main" id="Main">
-      <section class="section section--padding-top-only free-trial__header">
+      <section class="section section--padding-top-only free-trial__header" style= "background-image:url(/static/img/back_ground_image_2.png);">
         <svg class="logo_shopify" aria-hidden="true" focusable="false">
           <use xlink:href="#logos-shopify-mono"></use>
         </svg>
@@ -70,9 +70,9 @@
             <div class="text_center_picture">
               <picture class="picture_final">
                 <source
-                  srcset=" /home/rviccinig/github/multiarmed_test/multiarmed_test/static/Picture_2.png 1x, /home/rviccinig/github/multiarmed_test/multiarmed_test/static/Picture_2.png 2x"
+                  srcset="{{url_for('static',filename='img/Picture_1.png')}} 1x, {{url_for('static',filename='img/Picture_2.png')}} 2x"
                   media="(min-width: 750px)"><img
-                  srcset="/home/rviccinig/github/multiarmed_test/multiarmed_test/static/Picture_3.png 1x, /home/rviccinig/github/multiarmed_test/multiarmed_test/static/Picture_4.png 2x"
+                  srcset="{{url_for('static',filename='img/Picture_3.png')}} 1x, {{url_for('static',filename='img/Picture_4.png')}} 2x"
                   alt="">
               </picture>
             </div>

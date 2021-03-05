@@ -1,0 +1,417 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  font-size: 1em;
+  line-height: 1.5;
+  color: #6b7177;
+  font-weight: 400;
+  font-family: ShopifySans, Helvetica, Arial, Lucida Grande, sans-serif;
+}
+
+.modal-container {
+  font-size: 1em;
+  line-height: 1.5;
+  color: #6b7177;
+  font-weight: 400;
+  font-family: ShopifySans, Helvetica, Arial, Lucida Grande, sans-serif;
+  box-sizing: border-box;
+  display: none;
+  min-height: 100vh;
+  left: 0;
+  opacity: 0;
+  padding: 0 0 65px;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  z-index: -1;
+  transition: opacity 150ms;
+}
+
+.modal {
+  font-size: 1em;
+  line-height: 1.5;
+  color: #6b7177;
+  font-weight: 400;
+  font-family: ShopifySans, Helvetica, Arial, Lucida Grande, sans-serif;
+  box-sizing: border-box;
+  backface-visibility: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 130px;
+  padding-right: 32px;
+  padding-left: 32px;
+  max-width: 990px;
+  position: relative;
+  text-align: left;
+  transition: all 150ms ease-out;
+  transform: scale(0.85);
+}
+
+.modal__header {
+  font-size: 1em;
+  line-height: 1.5;
+  color: #6b7177;
+  font-weight: 400;
+  font-family: ShopifySans, Helvetica, Arial, Lucida Grande, sans-serif;
+  text-align: left;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.modal__controls {
+  font-size: 1em;
+  line-height: 1.5;
+  color: #6b7177;
+  font-weight: 400;
+  font-family: ShopifySans, Helvetica, Arial, Lucida Grande, sans-serif;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 32px;
+  padding-right: 32px;
+  max-width: 990px;
+  text-align: right;
+}
+
+.modal__close {
+  box-sizing: border-box;
+  touch-action: manipulation;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  display: inline-block;
+  cursor: pointer;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  margin: 0.625em -0.625em 0 0;
+  padding: 0.625em;
+  opacity: 0.7;
+  transition: opacity 300ms ease;
+}
+
+.modal__content {
+  font-size: 1em;
+  line-height: 1.5;
+  color: #6b7177;
+  font-weight: 400;
+  font-family: ShopifySans, Helvetica, Arial, Lucida Grande, sans-serif;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+section {
+  font-size: 1em;
+  line-height: 1.5;
+  color: #6b7177;
+  font-weight: 400;
+  font-family: ShopifySans, Helvetica, Arial, Lucida Grande, sans-serif;
+  box-sizing: border-box;
+  padding: 4em 0;
+  padding-bottom: 0;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  position: relative;
+  padding-top: 32px;
+  background-image: url("{{ url_for('static', filename='/back_ground_image_1.png') }}");
+}
+
+.logo_shopify {
+  font-size: 1em;
+  line-height: 1.5;
+  color: #6b7177;
+  font-weight: 400;
+  font-family: ShopifySans, Helvetica, Arial, Lucida Grande, sans-serif;
+  box-sizing: border-box;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: block;
+  width: 111px;
+  height: 32px;
+  margin: 0 auto 48px;
+  fill: #ffffff;
+}
+
+.grid_hero_wrapper {
+  font-size: 1em;
+  line-height: 1.5;
+  color: #6b7177;
+  font-weight: 400;
+  font-family: ShopifySans, Helvetica, Arial, Lucida Grande, sans-serif;
+  box-sizing: border-box;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 5%;
+  padding-right: 5%;
+  display: flow-root;
+}
+
+.grid__item {
+  font-size: 1em;
+  line-height: 1.5;
+  color: #6b7177;
+  font-weight: 400;
+  font-family: ShopifySans, Helvetica, Arial, Lucida Grande, sans-serif;
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+  width: 100%;
+  float: left;
+  padding-left: 9px;
+  padding-right: 9px;
+}
+
+.section_header {
+  font-size: 1em;
+  line-height: 1.5;
+  color: #6b7177;
+  font-weight: 400;
+  font-family: ShopifySans, Helvetica, Arial, Lucida Grande, sans-serif;
+  box-sizing: border-box;
+  text-align: center;
+  margin-bottom: 32px !important;
+}
+
+.section_header_h1 {
+  text-align: center;
+  box-sizing: border-box;
+  margin-top: 0;
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures contextual discretionary-ligatures;
+  font-feature-settings: 'kern', 'liga', 'clig', 'calt', 'dlig';
+  display: block;
+  line-height: 1.2142857143;
+  font-family: ShopifySans, Helvetica, Arial, sans-serif;
+  letter-spacing: -0.0207142857em;
+  font-size: 1.75em;
+  margin-bottom: 0.5em;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.section_header_p {
+  text-align: center;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures contextual discretionary-ligatures;
+  font-feature-settings: 'kern', 'liga', 'clig', 'calt', 'dlig';
+  display: block;
+  line-height: 1.3333333333;
+  font-family: ShopifySans, Helvetica, Arial, sans-serif;
+  font-size: 1.5em;
+  margin-bottom: 0.8333333333em;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.grid_item_form_div {
+  font-size: 1em;
+  line-height: 1.5;
+  color: #6b7177;
+  font-weight: 400;
+  font-family: ShopifySans, Helvetica, Arial, Lucida Grande, sans-serif;
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+  padding-left: 9px;
+  padding-right: 9px;
+  width: 66.6666666667%;
+  float: none;
+  clear: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.js_form_class {
+  font-size: 1em;
+  line-height: 1.5;
+  color: #6b7177;
+  font-weight: 400;
+  font-family: ShopifySans, Helvetica, Arial, Lucida Grande, sans-serif;
+  box-sizing: border-box;
+  text-align: center;
+  margin-bottom: 16px !important;
+}
+
+.market_input_wrapper {
+  font-size: 1em;
+  line-height: 1.5;
+  color: #6b7177;
+  font-weight: 400;
+  font-family: ShopifySans, Helvetica, Arial, Lucida Grande, sans-serif;
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.marketing_input_button_pair {
+  font-size: 1em;
+  line-height: 1.5;
+  color: #6b7177;
+  font-weight: 400;
+  font-family: ShopifySans, Helvetica, Arial, Lucida Grande, sans-serif;
+  text-align: left;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.marketing_input_button_pair_label {
+  line-height: 1.5;
+  text-align: left;
+  box-sizing: border-box;
+  touch-action: manipulation;
+  display: block;
+  font-family: ShopifySans, Helvetica, Arial, sans-serif;
+  color: #42474c;
+  position: absolute;
+  left: 1rem;
+  top: 0.5rem;
+  font-size: 0.6875em;
+  font-weight: 400;
+  pointer-events: none;
+  z-index: 10;
+  opacity: 0;
+  transform: translateY(3px);
+  transition-property: opacity, transform;
+  transition-duration: 150ms;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  flex-basis: 100%;
+}
+
+.more_button_style {
+  box-sizing: border-box;
+  touch-action: manipulation;
+  display: inline-block;
+  height: 3.2em;
+  width: 100%;
+  margin: 0 0 15px;
+  padding: 1em 0.9375em;
+  color: #212326;
+  font-family: ShopifySans, Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  box-shadow: 0 0 0 1px #6b7177;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: #ffffff;
+  transition: padding 150ms;
+  appearance: none;
+  margin-right: 8px;
+  margin-left: 8px;
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: 250px;
+  margin-bottom: 8px;
+}
+
+.button_register_style{
+  box-sizing: border-box;
+touch-action: manipulation;
+background: none;
+margin: 0;
+border: 0;
+display: inline-block;
+padding: 1em 1.8125em;
+border-radius: 4px;
+font-family: ShopifySans, Helvetica, Arial, sans-serif;
+font-weight: 700;
+font-size: 1em;
+line-height: 1.133;
+transition: 150ms ease;
+transition-property: background-color, border-color, box-shadow, color;
+text-align: center;
+user-select: none;
+appearance: none;
+cursor: pointer;
+border-width: 1px;
+border-style: solid;
+border-color: transparent;
+text-decoration: none;
+margin-right: 8px;
+margin-left: 8px;
+flex-grow: 1;
+box-shadow: 0 5px 15px 0 rgba(0,0,0,0.15);
+background-color: #212326;
+color: #ffffff;
+margin-bottom: 8px;
+}
+
+.marketing-form__messages {
+  line-height: 1.5;
+  color: #6b7177;
+  font-family: ShopifySans, Helvetica, Arial, Lucida Grande, sans-serif;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 0.8125em;
+  font-weight: 400;
+}
+
+
+.marketing_text_style {
+  font-weight: 400;
+  font-family: ShopifySans, Helvetica, Arial, Lucida Grande, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-size: 0.75em;
+  margin-top: 16px;
+  margin-bottom: 32px !important;
+  text-align: center;
+  color: #ffffff;
+}
+
+.giant_picture_grid {
+  font-size: 1em;
+  line-height: 1.5;
+  color: #6b7177;
+  font-weight: 400;
+  font-family: ShopifySans, Helvetica, Arial, Lucida Grande, sans-serif;
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+  padding-left: 9px;
+  padding-right: 9px;
+  width: 66.6666666667%;
+  float: none;
+  clear: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text_center_picture {
+  font-size: 1em;
+  line-height: 1.5;
+  color: #6b7177;
+  font-weight: 400;
+  font-family: ShopifySans, Helvetica, Arial, Lucida Grande, sans-serif;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.picture_final {
+  font-size: 1em;
+  line-height: 1.5;
+  color: #6b7177;
+  font-weight: 400;
+  font-family: ShopifySans, Helvetica, Arial, Lucida Grande, sans-serif;
+  text-align: center;
+  box-sizing: border-box;
+}

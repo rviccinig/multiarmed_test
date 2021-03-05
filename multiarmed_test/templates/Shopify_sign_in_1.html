@@ -6,7 +6,7 @@
   <meta charset="utf-8">
 
   <!--  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/my_shopify_style.css') }}">-->
-  <link rel="stylesheet" href="./styles/my_shopify_style.css">
+  <link rel="stylesheet" href=  "{{url_for('static',filename='styles/my_shopify_style.css')}}">
 
   <!-- This is the Shopify example landing page -->
   <title></title>
@@ -40,7 +40,7 @@
     </svg></div>
   <div id="PageContainer">
     <main role="main" id="Main">
-      <section class="section section--padding-top-only free-trial__header">
+      <section class="section section--padding-top-only free-trial__header" style= "background-image:url(/static/img/back_ground_image_1.png);" >
         <svg class="logo_shopify" aria-hidden="true" focusable="false">
           <use xlink:href="#logos-shopify-mono"></use>
         </svg>
@@ -68,9 +68,9 @@
             <div class="text_center_picture">
               <picture class="picture_final">
                 <source
-                  srcset="https://cdn.shopify.com/shopifycloud/brochure/assets/landers/short-lander/free-trial/default@tablet-83f017c08356e1b69d531716b99faa0ff7ff6cee61097d7f5169a55032d79e73.png 1x, https://cdn.shopify.com/shopifycloud/brochure/assets/landers/short-lander/free-trial/default@tablet-2x-c9cab32812fc9202e12a79e9e22dbe05c3966476c7aa16e57d491c5fdc8565ec.png 2x"
+                  srcset="{{url_for('static',filename='img/Picture_1.png')}} 1x, {{url_for('static',filename='img/Picture_2.png')}} 2x"
                   media="(min-width: 750px)"><img
-                  srcset="https://cdn.shopify.com/shopifycloud/brochure/assets/landers/short-lander/free-trial/default@mobile-3fe887017342aa5a2a0d2ad2d4d4755382e331ec1bebfb4c68579bbe89d4532b.png 1x, https://cdn.shopify.com/shopifycloud/brochure/assets/landers/short-lander/free-trial/default@mobile-2x-1e95e12dd1cec4201eecf6f4f4001317b06dcfb8cfc9b6001f46030940a49cc2.png 2x"
+                  srcset="{{url_for('static',filename='img/Picture_3.png')}} 1x, {{url_for('static',filename='img/Picture_4.png')}} 2x"
                   alt="">
               </picture>
             </div>
