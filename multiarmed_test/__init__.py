@@ -22,6 +22,7 @@ Migrate(app,db)
 
 ############# Blueprints ###################################
 # this is where the Blueprints of the application that render the views are set up
-from multiarmed_test.core.views import users_blueprint
+from multiarmed_test.core.views import users_blueprint,thank_you_blueprint
 
 app.register_blueprint(users_blueprint,url_prefix="/")
+app.register_blueprint(thank_you_blueprint,url_prefix="/thankyou")
