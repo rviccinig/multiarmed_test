@@ -17,12 +17,11 @@ prob=[0.34,0.34,0.32]
 @users_blueprint.route('/', methods=['GET', "POST"])
 def register():
     form = RegistrationForm()
+    choice=np.random.choice(templates,1,p=prob)[0]
+    #choice is an array that produces the path for one of the html but I scope the 0 element.
     if form.validate_on_submit():
-        user = User(email=form.email.data)
+        user = User(email=form.email.data,landing_page=choice)
         db.session.add(user)
         db.session.commit()
-        flash('thanks for registration!')
-        return redirect(url_for('thankyou.html'))
-    choice=np.random.choice(templates,1,p=prob)[0]
-#choice is an array that produces the path for one of the html but I scope the 0 element.
+        return redirect(url_for('./templates/thankyou.html'))
     return render_template(choice,form=form)
