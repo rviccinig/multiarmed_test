@@ -1,8 +1,8 @@
 MultiArmed Bandit app
 
-This application display random landing pages in grabs information of registered users. For now I am just using a mockup shopify landing page for learning purporses.
-My database records the users email and the random database were the user registers (fx: Landing Page # 1).
-The Multiarmed Bandit Module is the one that determines the probability of a webpage to be displayed based on the conversion rate for each fo the landing pages.
+This application randomly displays landing pages and grabs information of registered users. For now I am just using a mockup shopify landing page for learning purposes.
+My database records the users email and the random landing page were the user registers (fx: Landing Page # 1).
+The Multiarmed Bandit Module is determines the probability of a landing page being displayed based on the conversion rate for each fo the landing pages.
 
 It is still a work in progress!
 
@@ -19,4 +19,5 @@ ____________________________________________________
 6. Create migrations by typing: flask db migrate -m "First Database"
 7. Upgrade : flask db Upgrade
 ____________________________________________________
+
 8. Run the applications :  python app.py
