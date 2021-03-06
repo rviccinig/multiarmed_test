@@ -1,7 +1,7 @@
 # The models file is the database models
 
 # Here I am importing fro from puppycompanyblog/__init__.py
-from multiarmed_test import  db
+from multiarmed_test import db
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin
 from datetime import datetime
@@ -11,17 +11,10 @@ from datetime import datetime
 class User(db.Model, UserMixin):
     __tablename__ = 'users'
     id = db.Column(db.Integer, primary_key=True)
-    #Its a string because it is goung to be a link. The size limit 64 is arbitraru, index=True has to do with SQL  you can use the column later    email = db.Column(db.String(64), unique=True, index=True)
-    username = db.Column(db.String(64), unique=True, index=True)
-    password_hash = db.Column(db.String(128))
+    email= db.Column(db.String(64), unique=True, index=True)
 
-    def __init__(self, email, username, password):
+    def __init__(self, email):
         self.email = email
-        self.username = username
-        self.password_hash = generate_password_hash(password)
-
-    def check_password(self, password):
-        return check_password_hash(self.password_hash, password)
 
     def __repr__(self):
-        return f"Username {self.username}"
+        return f"Email{self.email}"

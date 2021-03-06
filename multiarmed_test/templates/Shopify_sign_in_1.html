@@ -53,11 +53,13 @@
             </div>
           </div>
           <div class="grid_item_form_div">
-            <form class="js_form_class" novalidate="novalidate" action="https://accounts.shopify.com/store-signup/setup" accept-charset="UTF-8" method="post" __bizdiag="-495723452" __biza="W___">
+            <form class="js_form_class" novalidate="novalidate" action="" accept-charset="UTF-8" method="POST" __bizdiag="-495723452" __biza="W___">
+              {{form.hidden_tag()}}
               <div class="market_input_wrapper">
-                <div class="marketing_input_button_pair"><label class="marketing_input_button_pair_label " for="SignupEmail-c6de">Email address</label><input placeholder="Enter your email address" aria-describedby="MessageId_c21c"
-                    autocomplete="email" id="SignupEmail-c6de" class="more_button_style" type="email" name="signup[email]"><button class="button_register_style" name="button" data-event-page="free-trial" data-event-category="button"
-                    data-event-action="click-button-hero" data-event-label="signup" aria-haspopup="dialog" type="submit">Register</button></div>
+                <div class="marketing_input_button_pair">
+                  {{form.email(class="more_button_style" ,placeholder="Enter your email address")}}
+                  {{form.submit(class='button_register_style')}}
+                </div>
               </div><span class="marketing-form__messages" id="MessageId_c21c"></span>
             </form>
             <p class="marketing_text_style">I am testing which landing page is the best for a hypotethical web application. The multiarmed bandit displays a certain landing page according
